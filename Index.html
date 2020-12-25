@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <title></title>
+    <script src="js/hammer.js"></script>
+    <script src="js/Three.js"></script>
+    <script src="js/Detector.js"></script>
+    <script src="js/ziploader.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/THREEx.FullScreen.js"></script>
+    <script src="js/THREEx.KeyboardState.js"></script>
+    <script src="js/THREEx.WindowResize.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/JQ_ThreeJsViewer.js"></script>
+    <script src="js/Tween.js"></script>
+</head>
+<body style="padding: 0; margin: 0;">
+    <div id="ThreeJS" style="z-index: 1; width: 100%; overflow: hidden;"></div>
+    <script type="text/javascript">
+        
+
+        var testDatas = [];
+        for (var i = 1; i < 39; i++) {
+            testDatas.push('TestData/Test4/_' + i + ".zip");
+        }
+        var viewer = new JQ_ThreeJsViewer('ThreeJS', true);
+        viewer.initLight(3, 4000);
+        viewer.LoadZips(testDatas);
+    </script>
+</body>
+</html>
